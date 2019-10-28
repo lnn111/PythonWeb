@@ -1,0 +1,11 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+
+<p>{{size}}</p>
+
+{% for item in lists %}
+
+<a href="{{item.link}}" target="_blank"><p>{{item.title}}</p></a>
+{% endfor %}
+{% endblock %}

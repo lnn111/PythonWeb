@@ -1,0 +1,14 @@
+{% extends 'admin/master.html' %}
+{% block body %}
+
+
+<form action="{{url_for('register')}}" method="POST">
+    <h1>用户注册</h1>
+    {{form.csrf_token()}}
+    {{form.name.label}}{{form.name}}<br>
+    {{form.psw.label}}{{form.psw}}<br>
+    {{form.username.label}}{{form.username}}<br>
+    {{form.submit}}
+</form>
+
+{% endblock %}
